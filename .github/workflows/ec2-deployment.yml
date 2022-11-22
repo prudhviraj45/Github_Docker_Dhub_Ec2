@@ -35,9 +35,9 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          docker pull mohanmul789/demo-web-app-ec2:latest
+          sudo docker pull mohanmul789/demo-web-app-ec2:latest
           #Stop container
-          docker stop demoapp
+          sudo docker stop demoapp
           #Remove all untagged images
-          docker system  prune -a -f
-          docker run -d -p 80:80 --name demoapp -it mohanmul789/demo-web-app-ec2
+          sudo docker system  prune -a -f
+          sudo docker run -d -p 80:80 --name demoapp -it mohanmul789/demo-web-app-ec2
