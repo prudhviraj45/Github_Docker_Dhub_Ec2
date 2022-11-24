@@ -40,4 +40,4 @@ jobs:
           sudo docker stop demoappp
           #Remove all untagged images
           sudo docker system prune -a -f
-          sudo docker run -d -p 5000:5000 --name demoappp -it prudhvirajch/myrepo:v2
+          sudo docker run -d -p 80:80 --name demoappp -it prudhvirajch/myrepo:v2
