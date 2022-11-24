@@ -30,7 +30,7 @@ jobs:
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
+        host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
@@ -40,4 +40,4 @@ jobs:
           sudo docker stop demoapp
           #Remove all untagged images
           sudo docker system  prune -a -f
-          sudo docker run -d -p 80:80 --name demoapp -it prudhvirajch/myrepo:latest
+          sudo docker run -d -p 5000:5000 --name demoapp -it prudhvirajch/myrepo:latest
