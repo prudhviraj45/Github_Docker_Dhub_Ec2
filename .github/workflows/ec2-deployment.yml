@@ -39,5 +39,5 @@ jobs:
           #Stop container
           sudo docker stop demoapp
           #Remove all untagged images
-          sudo docker system  prune -a -f
+          sudo docker system prune -a -f
           sudo docker run -d -p 5000:5000 --name demoapp -it prudhvirajch/myrepo:latest
